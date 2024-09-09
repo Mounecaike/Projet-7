@@ -217,3 +217,32 @@ footer nav ul {
 	justify-content: center;
 	margin-bottom: 25px;
 }
+
+/* Login */
+.login h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.login input{
+	width: 379px;
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+
+}
+.login label{
+	font-weight: bold;
+	margin: 2em 0 1em 0;
+}
+.login form {
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 379px;
+	margin: 0 auto;
+}
+.login [type="submit"]{
+	width: 179px;
+}
