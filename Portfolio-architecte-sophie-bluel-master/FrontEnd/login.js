@@ -29,3 +29,21 @@ loginForm.addEventListener('submit', function (event) {
         console.error('Erreur:', error);
     });
 });
+
+function updateLoginStatus() {
+    const token = localStorage.getItem('token');
+    const banner = document.getElementById('banner');
+    const loginButton = document.querySelector('.btnlogin');
+    const logoutButton = document.querySelector('.btnlogout');
+
+    if (token) {
+        banner.classList.add('connected');
+        loginButton.classList.add('connected');
+        logoutButton.classList.add('connected');
+    } else {
+        banner.classList.remove('connected');
+        loginButton.classList.remove('connected');
+        logoutButton.classList.remove('connected');
+    }
+}
+updateLoginStatus()
