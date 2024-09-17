@@ -251,18 +251,9 @@ footer nav ul {
 #banner{
 	display: none;
 }
-#banner.connected{
-	display: flex;
-}
 .btnlogin {
 	display: flex;
 }
-.btnlogin.connected {
-	display: none;
-}
 .btnlogout {
 	display: none;
-}
-.btnlogout.connected{
-	display: flex;
 }
