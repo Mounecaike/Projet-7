@@ -30,20 +30,33 @@ loginForm.addEventListener('submit', function (event) {
     });
 });
 
-function updateLoginStatus() {
-    const token = localStorage.getItem('token');
-    const banner = document.getElementById('banner');
-    const loginButton = document.querySelector('.btnlogin');
+const loginbutton = document.getElementById('bntlogin');
+
+loginButton.addEventListener('click', function () {
+    window.location.href = 'login.html';
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loginbutton = document.querySelector('.btnlogin');
     const logoutButton = document.querySelector('.btnlogout');
+    const banner = document.getElementById('banner');
+    const token = localStorage.getItem('token');
 
     if (token) {
-        banner.classList.add('connected');
-        loginButton.classList.add('connected');
-        logoutButton.classList.add('connected');
+        loginButton.style.display = 'none';
+        logoutButton.style.display = 'block';
+        banner.style.display = 'flex';
     } else {
-        banner.classList.remove('connected');
-        loginButton.classList.remove('connected');
-        logoutButton.classList.remove('connected');
+        loginButton.style.display = 'block';
+        logoutButton.style.display = 'none';
+        banner.style.display = 'none';
     }
-}
-updateLoginStatus()
+
+
+    logoutButton.addEventListener('click', function () {
+        localStorage.removeItem('token');
+        loginButton.style.display = 'block';
+        logoutButton.style.display = 'none';
+        banner.style.display = 'none';
+    });
+});
