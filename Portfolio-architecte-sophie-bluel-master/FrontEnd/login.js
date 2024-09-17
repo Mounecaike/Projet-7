@@ -1,3 +1,10 @@
+const loginbutton = document.getElementById('bntlogin');
+
+loginbutton.addEventListener('click', function () {
+    window.location.href = 'login.html';
+});
+
+
 const loginForm = document.querySelector('.loginform');
 
 loginForm.addEventListener('submit', function (event) {
@@ -30,14 +37,8 @@ loginForm.addEventListener('submit', function (event) {
     });
 });
 
-const loginbutton = document.getElementById('bntlogin');
-
-loginButton.addEventListener('click', function () {
-    window.location.href = 'login.html';
-})
-
 document.addEventListener('DOMContentLoaded', function () {
-    const loginbutton = document.querySelector('.btnlogin');
+    const loginButton = document.querySelector('.btnlogin');
     const logoutButton = document.querySelector('.btnlogout');
     const banner = document.getElementById('banner');
     const token = localStorage.getItem('token');
