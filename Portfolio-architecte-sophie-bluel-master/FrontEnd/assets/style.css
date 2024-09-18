@@ -130,10 +130,6 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
 .gallery {
 	width: 100%;
 	display: grid;
@@ -248,12 +244,27 @@ footer nav ul {
 }
 
 /* connected */
-#banner{
-	display: none;
+.banner i {
+	margin-right: 10px;
 }
-.btnlogin {
+#banner {
+	justify-content: center;
+	background-color: black; 
+	color: white; 
+	text-align: center; 
+	padding: 10px 0; 
+	font-weight: bold;
+	display: none;
+	position: fixed;
+	width: 100%; 
+	top: 0;
+	z-index: 1000; 
+  }
+  .btnlogin {
 	display: flex;
 }
 .btnlogout {
 	display: none;
 }
+
+
