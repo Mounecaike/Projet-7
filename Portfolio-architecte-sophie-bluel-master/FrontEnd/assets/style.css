@@ -256,15 +256,123 @@ footer nav ul {
 	font-weight: bold;
 	display: none;
 	position: fixed;
-	width: 100%; 
+	width: 100%;
+	max-width: 1140px;
 	top: 0;
 	z-index: 1000; 
   }
-  .btnlogin {
+.btnlogin {
 	display: flex;
 }
 .btnlogout {
 	display: none;
 }
+.modif-btn {
+	display: flex;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.modif-btn i {
+	margin-right: 5px;
+}
 
+.modif-projet {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Style de la modale */
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1000; 
+	left: 0; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(0, 0, 0, 0.8); 
+  }
 
+.modal-content h3{
+	font-family:'Work Sans';
+	color: black;
+	font-size: 26px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.modal-content {
+	position: relative;
+	margin: auto;
+	padding: 20px;
+	background-color: white;
+	width: 40%;
+	height: 60%;
+	overflow-y: auto;
+  }
+  
+.gallery-modale {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+.gallery-modale img {
+	position: relative;
+	width: 75px;
+	height: 100px;
+	margin: 10px;
+  }
+  
+.gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px; 
+	justify-content: center; 
+  }
+  
+.project {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.project img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+.project .delete-icon {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+  }
+  
+.project .delete-icon:hover {
+	background-color: rgba(255, 0, 0, 0.8);
+	color: white;
+  }
+	  
+.add-photo-btn {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+.close {
+	cursor: pointer;
+}
