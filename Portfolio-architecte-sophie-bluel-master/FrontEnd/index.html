@@ -39,8 +39,22 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<div class="modifierprojet">
-			<h2>Mes Projets</h2>
+		<div class="modif-projet">
+			<h2>Mes projets </h2>
+				<div class="modif-btn">
+					<i id="editIcon" class="fa-solid fa-pen-to-square" style="display:none;"></i> 
+					<span id="openModal" class="openmodale">Modifier</span>
+					<div id="modal" class="modal">
+						<div class="modal-content">
+						  <span id="closeModal" class="close">&times;</span>
+						  <h3>Galerie Photo</h3>
+						  <div id="gallery-modale" class="gallery-modale">
+						  </div>
+						  <button id="addPhotoBtn" class="add-photo-btn">Ajouter une photo</button>
+						</div>
+					  </div>
+				 </div>
+		</div>		
 		<div class="filter" id="filter"></div>
 		<div class="gallery" id="gallery"></div>
 	</section>
