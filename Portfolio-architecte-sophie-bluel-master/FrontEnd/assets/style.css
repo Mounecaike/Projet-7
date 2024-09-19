@@ -270,12 +270,13 @@ footer nav ul {
 .modif-btn {
 	display: flex;
 	margin-left: 15px;
-	cursor: pointer;
 }
 .modif-btn i {
 	margin-right: 5px;
 }
-
+.cursor{
+	cursor: pointer;
+}
 .modif-projet {
 	margin-bottom: 30px;
 	display: flex;
