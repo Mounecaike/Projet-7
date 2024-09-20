@@ -2,6 +2,12 @@ const worksurl = "http://localhost:5678/api/works";
 const categoryurl = "http://localhost:5678/api/categories";
 let allWorks = []; 
 
+// redirection login 
+loginButton.addEventListener('click', function (){
+    window.location.href = "login.html";
+
+})
+
 // Function to retrieve projects
 function getProjects() {
     fetch(worksurl)
