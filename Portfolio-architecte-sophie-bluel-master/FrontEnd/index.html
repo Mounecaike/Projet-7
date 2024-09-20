@@ -13,7 +13,7 @@
 <body>
 <header>
 	<div id="banner" class="banner">
-		<i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>Mode édition
+		<i class="fa-solid fa-pen-to-square"></i>Mode édition
 	</div>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
@@ -29,7 +29,7 @@
 <main>
 	<section id="introduction">
 		<figure>
-			<img src="./assets/images/sophie-bluel.png" alt="">
+			<img src="./assets/images/sophie-bluel.png" alt="photo de sophie-bluel">
 		</figure>
 		<article>
 			<h2>Designer d'espace</h2>
@@ -41,19 +41,19 @@
 	<section id="portfolio">
 		<div class="modif-projet">
 			<h2>Mes projets </h2>
-				<div class="modif-btn">
-					<i id="editIcon" class="fa-solid fa-pen-to-square" style="display:none;"></i> 
-					<span id="openModal" class="openmodale">Modifier</span>
-					<div id="modal" class="modal">
-						<div class="modal-content">
-						  <span id="closeModal" class="close">&times;</span>
-						  <h3>Galerie Photo</h3>
-						  <div id="gallery-modale" class="gallery-modale">
-						  </div>
-						  <button id="addPhotoBtn" class="add-photo-btn">Ajouter une photo</button>
-						</div>
-					  </div>
-				 </div>
+			<div class="modif-btn">
+				<i id="editIcon" class="fa-solid fa-pen-to-square cursor"></i> 
+				<span id="openModal" class="openmodale cursor">Modifier</span>
+				<div id="modal" class="modal">
+					<div class="modal-content">
+					  <span id="closeModal" class="close">&times;</span>
+					  <h3>Galerie Photo</h3>
+					  <div id="gallery-modale" class="gallery-modale">
+					</div>
+					  <button id="addPhotoBtn" class="add-photo-btn">Ajouter une photo</button>
+					</div>
+				</div>
+			 </div>
 		</div>		
 		<div class="filter" id="filter"></div>
 		<div class="gallery" id="gallery"></div>
@@ -81,7 +81,7 @@
 	</nav>
 </footer>
 <script src="https://kit.fontawesome.com/6a5ca0e690.js" crossorigin="anonymous"></script>
+<script src="edit.js"></script>
 <script src="script.js"></script>
-<script src="login.js"></script>
 </body>
 </html>
