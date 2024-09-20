@@ -213,7 +213,9 @@ footer nav ul {
 	justify-content: center;
 	margin-bottom: 25px;
 }
-
+.indexredirect {
+	cursor: pointer;
+}
 /* Login */
 .login h2 {
 	text-align: center;
@@ -245,6 +247,7 @@ footer nav ul {
 
 /* connected */
 .banner i {
+	color: white;
 	margin-right: 10px;
 }
 #banner {
