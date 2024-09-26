@@ -49,31 +49,37 @@
 						<span id="closeModal" class="close">&times;</span>
 						<h3>Galerie Photo</h3>
 						<div id="gallery-modale" class="gallery-modale"></div>
-					  <button id="addPhotoBtn" class="add-photo-btn">Ajouter une photo</button>
+						<hr class="separate-modale">
+					  <button id="addPhotoBtn" class="open-modale-photo">Ajouter une photo</button>
 					</div>
 				</div>
 				<div id="addPhotoModal" class="modal">
-					<div class="modal-content">
+					<div class="modal-content-photo">
 						<span id="closeAddPhotoModal" class="close">&times;</span>
-						<h3>Ajouter une photo</h3>
-						<div class="image-upload">
-							<label class="image-label" for="image">
-								<i class="fa-regular fa-image"></i>
-							</label>
-							<input type="file" id="image" name="image" accept="image/*" required>
-							<div class="add-photo-btn" id="uploadphoto">+ Ajouter une photo</div> 
-							<p class="file-info">jpg, png : 4mo max</p>
+						<h3>Ajouter photo</h3>
+						<div class="image-form">
+							<div class="image-upload">
+								<label class="image-label" for="image">
+									<i class="fa-regular fa-image"></i>
+								</label>
+								<input type="file" id="image" name="image" accept="image/*" required>
+								<img id="imagePreview" class="image-preview" alt="Aperçu de l'image">
+								<div class="add-photo-btn" id="uploadphoto">+ Ajouter photo</div> 
+								<p class="file-info">jpg, png : 4mo max</p>
+							</div>
+							<form id="addPhotoForm" class="form-add-photo">
+								<label for="title">Titre</label>
+								<input type="text" id="title" name="title" required>  
+								<label for="category">Catégorie</label>
+								<select id="category" name="category" required></select>
+								<hr class="separate">
+								<button type="submit">Ajouter</button>
+							</form>
 						</div>
-						<form id="addPhotoForm">
-							<label for="title">Titre:</label>
-							<input type="text" id="title" name="title" required><br>  
-							<label for="category">Catégorie:</label>
-							<select id="category" name="category" required></select><br>  
-							<button type="submit">Ajouter</button>
-						</form>
 					</div>
 				</div>
-						</div>		
+			</div>		
+		</div>
 		<div class="filter" id="filter"></div>
 		<div class="gallery" id="gallery"></div>
 	</section>
