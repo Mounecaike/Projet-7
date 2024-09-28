@@ -116,7 +116,8 @@ async function deleteProject(projectId) {
             }
         });
         if (response.ok) {
-            await loadProjects(); 
+            await loadProjects();
+            await getProjects() 
         }
     } catch (error) {
         console.error("Erreur lors de la suppression du projet :", error);
@@ -135,13 +136,9 @@ imageInput.addEventListener("change", function () {
     const file = this.files[0];
     
     if (file) {
-        const reader = new FileReader();
-        
-        reader.onload = function (e) {
-            imagePreview.style.display = "block";
-            imagePreview.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
+        const imageUrl = URL.createObjectURL(file);
+        imagePreview.style.display = "block";
+        imagePreview.src = imageUrl;  
     }
 });
 // ajouté une nouvelle photo
@@ -163,6 +160,7 @@ document.getElementById("addPhotoForm").addEventListener("submit", function (eve
     formData.append("title", title);
     formData.append("categoryId", categoryId);
     formData.append("image", imageFile);  
+    console.log("formdata:", formData)
 
     fetch("http://localhost:5678/api/works", {
         method: "POST",
@@ -171,6 +169,7 @@ document.getElementById("addPhotoForm").addEventListener("submit", function (eve
         },
         body: formData 
     })
+    .then(response => response.json())
     .then(response => {
         if (response.ok) {
             alert("Projet ajouté avec succès !");
@@ -181,6 +180,8 @@ document.getElementById("addPhotoForm").addEventListener("submit", function (eve
         }
     })
     .catch(error => console.error("Erreur:", error));
+    console.log("Bearer Token:", `Bearer ${localStorage.getItem("token")}`);
+    console.log(imageFile);
 });
 
 //chargement des catégories
