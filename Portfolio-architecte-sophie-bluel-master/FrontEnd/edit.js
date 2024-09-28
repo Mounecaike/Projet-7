@@ -159,8 +159,9 @@ document.getElementById("addPhotoForm").addEventListener("submit", function (eve
     const formData = new FormData();
     formData.append("title", title);
     formData.append("categoryId", categoryId);
-    formData.append("image", imageFile);  
-    console.log("formdata:", formData)
+    formData.append("imageUrl", imageFile);  
+    console.log("formdata:", formData);
+    
 
     fetch("http://localhost:5678/api/works", {
         method: "POST",
