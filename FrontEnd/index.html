@@ -72,9 +72,11 @@
 								<label for="title">Titre</label>
 								<input type="text" id="title" name="title" required>  
 								<label for="category">Catégorie</label>
-								<select id="category" name="category" required></select>
+								<select id="category" name="category" required>
+									<option value="0"></option>
+								</select>
 								<hr class="separate">
-								<button type="submit">Ajouter</button>
+								<button type="submit" id="submitBtn">Valider</button>
 							</form>
 						</div>
 					</div>
@@ -98,7 +100,6 @@
 		</form>
 	</section>
 </main>
-
 <footer>
 	<nav>
 		<ul>
@@ -107,7 +108,6 @@
 	</nav>
 </footer>
 <script src="https://kit.fontawesome.com/6a5ca0e690.js" crossorigin="anonymous"></script>
-<script src="edit.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
