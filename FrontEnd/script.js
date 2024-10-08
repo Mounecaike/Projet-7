@@ -13,6 +13,11 @@ const closeModalButton = document.getElementById("closeModal");
 const addPhotoBtn = document.getElementById("addPhotoBtn");
 const addPhotoModal = document.getElementById("addPhotoModal");
 const closeAddPhotoModal = document.getElementById("closeAddPhotoModal");
+// const formulaire
+const addPhotoForm = document.getElementById("addPhotoForm")
+const titleInput = document.getElementById("title");
+const categorySelect = document.getElementById("category");
+const submitBtn = document.getElementById("submitBtn");
 const imageInput = document.getElementById("image");
 const iconeImage = document.querySelector(".image-label")
 const textInput = document.getElementById("uploadphoto")
@@ -128,6 +133,7 @@ function editpage () {
             editIcon.style.display = "none";
         }
 }
+
 // fonction de la modale
 function modalefunction () {
         if (openModalButton && editIcon) {
@@ -202,6 +208,7 @@ async function loadProjects() {
         })
         .catch(error => console.error("Erreur lors du chargement des projets :", error));
 }
+
 // supprimez les projets de la modale 
 async function deleteProject(projectId) {
     try {
@@ -228,6 +235,7 @@ document.querySelectorAll(".delete-icon").forEach(icon => {
       deleteProject(projectId);
     });
 });
+
 // prévualisation de l'image
 textInput.addEventListener("click", function () {
     imageInput.click();
@@ -243,6 +251,7 @@ imageInput.addEventListener("change", function () {
         imagePreview.src = imageUrl;  
     }
 });
+
 // ajouté une nouvelle photo
 addPhotoBtn.addEventListener("click", function () {
     modal.style.display = "none";  
@@ -250,8 +259,28 @@ addPhotoBtn.addEventListener("click", function () {
     close
 });
 
+// Bouton d'envoi passe au vert si tout est rempli
+function VerificationForm() {
+    const titleFilled = titleInput.value.trim() !== '';
+    const categoryFilled = categorySelect.value > 0; 
+    const imageFilled = imageInput.files.length > 0;
+    if (titleFilled && categoryFilled && imageFilled) {
+        submitBtn.style.backgroundColor = 'green';
+        submitBtn.style.color = 'white';
+    } else {
+        submitBtn.style.backgroundColor = '';
+        submitBtn.style.color = '';
+    }
+}
+
+titleInput.addEventListener('input', VerificationForm);
+categorySelect.addEventListener('change', VerificationForm);
+imageInput.addEventListener('change', VerificationForm);
+
+VerificationForm();
+
 // Formulaire d'envoi du nouveau projet
-document.getElementById("addPhotoForm").addEventListener("submit", function (event) {
+addPhotoForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const title = document.getElementById("title").value;
     const categoryId = document.getElementById("category").value;
@@ -282,6 +311,11 @@ document.getElementById("addPhotoForm").addEventListener("submit", function (eve
                 addPhotoModal.style.display = "none";
                 modal.style.display = "flex";
             getProjects();
+            addPhotoForm.reset();
+            imagePreview.style.display = "none";
+            imagePreview.src = "";
+            iconeImage.style.display = "block";
+            textInput.style.display = "block"
         }
         return response.json()
     })
