@@ -502,6 +502,7 @@ footer nav ul {
 	width: 237px;
 	color: white;
 	background: rgba(167, 167, 167, 1);
+	cursor: pointer;
 
 }
 .form-add-photo {
