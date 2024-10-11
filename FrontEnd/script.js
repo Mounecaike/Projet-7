@@ -73,6 +73,8 @@ function addFilterButtons(categories) {
         filterContainer.appendChild(filterButton);
     });
 
+    allButton.classList.add('selected');
+
     const filterButtons = document.querySelectorAll('#filter h3');
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -315,7 +317,8 @@ addPhotoForm.addEventListener("submit", function (event) {
             imagePreview.style.display = "none";
             imagePreview.src = "";
             iconeImage.style.display = "block";
-            textInput.style.display = "block"
+            textInput.style.display = "block";
+            VerificationForm();
         }
         return response.json()
     })
