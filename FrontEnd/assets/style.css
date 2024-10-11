@@ -272,7 +272,7 @@ footer nav ul {
 	display: none;
 	position: fixed;
 	width: 100%;
-	max-width: 1140px;
+	left: 0;
 	top: 0;
 	z-index: 1000; 
   }
@@ -423,10 +423,12 @@ footer nav ul {
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	font-size: 25px;
 	float: right;
 	cursor: pointer;
 }
 .closeModal {
+	font-size: 25px;
 	float: right;
 	cursor: pointer;
 }
